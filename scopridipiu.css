@@ -1,0 +1,176 @@
+body {
+    background-color: black !important; /* Imposta uno sfondo nero */
+    margin: 0;
+    padding: 0;
+}
+
+
+.icona-instagram {
+    position: fixed;
+    top: 40px; /* Distanza dalla parte superiore del viewport */
+    left: 40px; /* Distanza dalla parte sinistra del viewport */
+    z-index: 999;
+    border-radius: 15px;
+}
+
+.icona-instagram img {
+    max-width: 85px; /* Imposta la larghezza desiderata per l'icona */
+    max-height: 100px; /* Imposta l'altezza desiderata per l'icona */
+    width: auto; /* Imposta la larghezza automatica in base all'immagine originale */
+    height: auto; /* Imposta l'altezza automatica in base all'immagine originale */
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+header {
+    background-color: #333;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0 10px #333;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 100%;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #333;
+}
+
+/* Riduci le dimensioni delle immagini e allineale orizzontalmente */
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Allinea verticalmente al centro */
+}
+
+.image-box {
+    flex-basis: calc(20% - 20px);
+    margin-right: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: inline-block; /* Allinea orizzontalmente */
+    text-align: center;
+}
+
+/* Riduci le dimensioni delle immagini */
+.image-box img {
+    max-width: 100%;
+    max-height: 100px; /* Imposta l'altezza massima */
+    border-radius: 5px;
+}
+
+/* Barra dei bottoni */
+.button-bar {
+    display: flex; /* Rendi i bottoni figli allineati in linea orizzontale */
+    justify-content: center; /* Allinea i bottoni al centro orizzontalmente */
+    margin-top: 10px; /* Aggiungi spazio sopra la barra dei bottoni, se necessario */
+}
+
+/* Stile dei bottoni */
+.btn {
+    position: relative;
+    color: var(--glow-color);
+    cursor: pointer;
+    padding: 0.35em 1.2em;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.8em;
+    background: none;
+    perspective: 2em;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em; /* Riduci la dimensione del font dei bottoni */
+    font-weight: 600;
+    letter-spacing: 0.05em; /* Riduci lo spacing tra le lettere */
+    box-shadow: inset 0 0 0.5em 0 var(--glow-color),
+                0 0 0.5em 0 var(--glow-color);
+    animation: border-flicker 2s linear infinite;
+    margin: 5px; /* Aggiungi margine tra i bottoni */
+}
+
+/* Al passaggio del mouse */
+/* Stile per i pulsanti quando passi sopra di essi */
+.btn:hover {
+    /* Aggiungi gli stili desiderati, ad esempio, cambiare il colore del testo o lo sfondo */
+    color: #007bff; /* Cambia il colore del testo in blu quando passi sopra il pulsante */
+}
+
+
+
+/* Regole aggiuntive per i bottoni specifici */
+
+
+.image-box {
+    flex-basis: calc(25% - 20px); /* Riduci il margine destro e la larghezza delle immagini */
+    margin-right: 10px; /* Riduci il margine destro */
+}
+
+.image-box img {
+    max-width: 100%;
+    max-height: 150px; /* Aumenta l'altezza massima delle immagini */
+    border-radius: 5px;
+}
+
+
+/* Stile di base per i pulsanti e i nomi sotto le immagini */
+/* Stile per i pulsanti */
+.btn {
+    /* Imposta il font con l'effetto "neon" */
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    /* Aggiungi l'effetto "neon" con text-shadow */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Cambia i valori RGBA secondo le tue preferenze */
+    /* Aggiungi gli stili desiderati, ad esempio, il colore del testo */
+    color: #fff; /* Colore del testo quando non passi sopra il pulsante */
+    /* Altri stili, come il colore di sfondo, se necessario */
+    background-color: transparent;
+    border: none;
+}
+
+/* Stile per i pulsanti quando passi sopra di essi */
+.btn:hover {
+    /* Cambia il colore del testo in "neon" quando passi sopra il pulsante */
+    color: rgba(0, 255, 255, 0.5); /* Cambia i valori RGBA secondo le tue preferenze */
+}
+
+/* Stile per i nomi sotto le immagini */
+.caption {
+    /* Imposta il font con l'effetto "neon" */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    /* Aggiungi l'effetto "neon" con text-shadow */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Cambia i valori RGBA secondo le tue preferenze */
+    /* Altri stili, come il colore del testo, se necessario */
+    color: #fff; /* Colore del testo quando non passi sopra il nome */
+}
+
+/* Stile per i nomi sotto le immagini quando passi sopra di essi */
+.caption:hover {
+    /* Cambia il colore del testo in "neon" quando passi sopra il nome */
+    color: rgba(0, 255, 255, 0.5); /* Cambia i valori RGBA secondo le tue preferenze */
+}
+
+

@@ -1,0 +1,185 @@
+:root {
+    --glow-color : #01fff4;
+    --black : rgb(100, 100, 100);
+    --shadow : #ffffff50;
+}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+html,
+main {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+main {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+.neon-btn1 {
+    position: relative;
+    color: var(--glow-color);
+    cursor: pointer;
+    padding: 0.35em 1.2em;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.8em;
+    background: none;
+    perspective: 2em;
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5em;
+    font-weight: 600;
+    letter-spacing: 1em;
+    box-shadow: inset   0 0 0.5em 0 var(--glow-color),
+                        0 0 0.5em 0 var(--glow-color);
+    animation: border-flicker 2s linear infinite;
+}
+.neon-text1 {
+    float: left;
+    margin-right: -0.8em;
+    text-shadow:  0 0 0.125em var(--shadow),
+                  0 0 0.45em var(--glow-color);
+    animation: text-flicker 3s linear infinite;
+}
+.faulty-letter1 {
+    opacity: 0.5;
+    animation: faulty-flicker1 2s linear infinite; /* Correggi il nome dell'animazione */
+}
+.neon-btn1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    filter: blur(1em);
+    background: var(--glow-color);
+    pointer-events: none;
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+}
+.neon-btn1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 0.6em;
+    background-color: var(--glow-color);
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+    transition: opacity 100ms linear;
+}
+.neon-btn1:hover {
+    color: var(--black);
+    text-shadow: none;
+    animation: none;
+}
+.neon-btn1:hover .neon-text1 {
+    animation: none;
+}
+.neon-btn1:hover::before {
+    filter: blur(1.5em);
+    opacity: 1;
+}
+.neon-btn1:hover::after {
+    opacity: 1;
+}
+.neon-btn1:hover .faulty-letter1 {
+    animation: none;
+    text-shadow: none;
+    opacity: 1;
+}
+@keyframes faulty-flicker1 {
+    0% {
+        opacity: 0.1;
+    }
+    2% {
+        opacity: 0.1;
+    }
+    4% {
+        opacity: 0.5;
+    }
+    19% {
+        opacity: 0.5;
+    }
+    21% {
+        opacity: 0.1;
+    }
+    23% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    83% {
+        opacity: 0.4;
+    }
+    87% {
+        opacity: 1;
+    }
+}
+@keyframes text-flicker1 {
+    0% {
+        opacity: 0.1;
+    }
+    2% {
+        opacity: 1;
+    }
+    8% {
+        opacity: 0.1;
+    }
+    9% {
+        opacity: 1;
+    }
+    12% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    72% {
+        opacity: 0.2;
+    }
+    77% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+@keyframes border-flicker1 {
+    0% {
+        opacity: 0.1;
+    }
+    2% {
+        opacity: 1;
+    }
+    4% {
+        opacity: 0.1;
+    }
+    8% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
